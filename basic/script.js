@@ -15,7 +15,7 @@ export const func1 = (n) => {
 export const func2 = (n) => {
   // このコードを完成させてください
   // FizzBuzz
-  if (isNaN(n) || n % 1 !== 0) {
+  if (isNaN(n) || n % 1 !== 0 || n < 1) {
     return 'error';
   } else if (n % 15 === 0) {
     return 'FizzBuzz';

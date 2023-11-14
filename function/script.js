@@ -18,8 +18,10 @@ const students = [
 
 export const func1 = () => {
   // このコードを完成させてください
+  return students.filter((student) => student.score >= 50).map(v => v.name);
 };
 
 export const func2 = () => {
   // このコードを完成させてください
+  return students.filter((student) => student.gender === 'male').reduce((acc, cur) => acc + cur.score, 0);
 };

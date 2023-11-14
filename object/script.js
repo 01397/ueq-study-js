@@ -6,10 +6,23 @@ const person = {
 
 export const func1 = () => {
   // このコードを完成させてください
+  const newPerson = {
+    ...person,
+    gender: "male",
+    interests: [{
+      name: 'programming',
+      emoji: '💻'
+    }, {
+      name: 'motorcycle',
+      emoji: '🏍'
+    }]
+  }
+  return newPerson
 };
 
 export const func2 = () => {
   // このコードを完成させてください
+  return JSON.stringify(person)
 };
 
 const jsonStr = `
@@ -40,4 +53,6 @@ const jsonStr = `
 
 export const func3 = () => {
   // このコードを完成させてください
+  const obj = JSON.parse(jsonStr)
+  return `${obj.name},${obj.email},${obj.company.name}`
 };
